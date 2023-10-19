@@ -5,8 +5,8 @@ include __DIR__ . "/Models/db.php";
 
 include __DIR__ . "/Models/db_due.php";
 include __DIR__ . "/Models/db_tre.php";
-
-$arrayFilm = [$film_uno, $film_due, $film_tre];
+include __DIR__ . "/Models/db_quattro.php";
+$arrayFilm = [$film_uno, $film_due, $film_tre, $film_quattro];
 
 
 
@@ -25,7 +25,7 @@ $arrayFilm = [$film_uno, $film_due, $film_tre];
 
 </head>
 
-<body>
+<body class="bg-info-subtle">
   <h1 class="text-center m-3 ">Film</h1>
   <div class="container">
 
@@ -33,7 +33,7 @@ $arrayFilm = [$film_uno, $film_due, $film_tre];
       <?php foreach ($arrayFilm as $film) : ?>
         <div class="col">
           <div class=" bg_header h-100 d-flex flex-column align-items-center p-3 card" style="width: 18rem;">
-            <img src=" <?php echo $film->img; ?>" class="card-img-top w-75 pb-2" alt="...">
+            <img src=" <?php echo $film->img; ?>" class="card-img-top w-75 h-100 pb-2" alt="...">
             <div class="card-body p-1 d-flex flex-column align-items-center ">
               <h5 class="card-text "><?php echo $film->name; ?></h5>
               <span><?php echo $film->direction; ?></span>
