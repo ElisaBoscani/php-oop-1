@@ -3,13 +3,16 @@ class Movie
 {
   public $name;
   public $genre;
+  public $img;
+  public $direction;
   public $vote;
   public $stars;
-  public function __construct($vote, $genre)
+  public function __construct($vote, $genre, $direction)
   {
     $this->vote = $vote;
     $this->stars = $this->createStar($vote);
     $this->genre = $genre;
+    $this->direction = $direction;
   }
   private function createStar($vote)
   {
