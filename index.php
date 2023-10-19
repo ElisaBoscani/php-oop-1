@@ -29,7 +29,12 @@ $film_uno = new Movis(4);
 $film_uno->name = "harry potter";
 $film_uno->genre = "fantasy";
 
-var_dump($film_uno)
+$film_due = new Movis(3);
+$film_due->name = "indiana jones 5";
+$film_due->genre = "azione";
+
+$arrayFilm = [$film_uno, $film_due];
+var_dump($arrayFilm)
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +49,14 @@ var_dump($film_uno)
 
 <body>
   <div>
-    <ul>
-      <li><?php echo $film_uno->name ?></li>
-      <li><?php echo $film_uno->genre ?></li>
-      <li><?php echo $film_uno->stars ?></li>
-    </ul>
+    <?php foreach ($arrayFilm as $film) : ?>
+      <ul>
+        <li><?php echo $film->name; ?></li>
+        <li><?php echo $film->genre; ?></li>
+        <li><?php echo $film->stars; ?></li>
+
+      </ul>
+    <?php endforeach; ?>
   </div>
 </body>
 
